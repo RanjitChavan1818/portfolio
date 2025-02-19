@@ -303,27 +303,28 @@
 </div><!-- End Section Title -->
 <div class="projects-container">
 <!-- Image Slider -->
-<div class="image-container">
-    <button class="arrow arrow-left" onclick="prevImage1()">&#10094;</button>
+<div class="image-container3">
+    <button class="arrow arrow-left" onclick="prevImage()">&#10094;</button>
     <img src="assets/img/Pro1.jpg" class="active" alt="Project 1">
     <img src="assets/img/Pro2.jpg"  alt="Project 2">
     <img src="assets/img/Pro3.jpg"  alt="Project 3">
-    <img src="assets/img/Pro4.jpg"  alt="Project 4">
+<img src="assets/img/Pro4.jpg"  alt="Project 4">
     <img src="assets/img/Pro5.jpg"  alt="Project 5">
     <img src="assets/img/Pro6.jpg"  alt="Project 6">
     <img src="assets/img/pro7.jpg"  alt="Project 7">
     <img src="assets/img/Pro8.jpg"  alt="Project 8">
     <img src="assets/img/Pro9.jpg"  alt="Project 9">
-    
-    <button class="arrow arrow-right" onclick="nextImage1()">&#10095;</button>
-</div>
 
+
+    
+    <button class="arrow arrow-right" onclick="nextImage()">&#10095;</button>
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".image-container img");
+    const images = document.querySelectorAll(".image-container3 img");
     let currentIndex = 0;
 
-    function updateImage1() {
+    function updateImage() {
         images.forEach((img, index) => {
             img.classList.remove("active");
             if (index === currentIndex) img.classList.add("active");
@@ -332,15 +333,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.nextImage = function () {
         currentIndex = (currentIndex + 1) % images.length;
-        updateImage1();
+        updateImage();
     };
 
     window.prevImage = function () {
         currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateImage1();
+        updateImage();
     };
 
-    updateImage1();
+    updateImage();
 });
 </script>
 
@@ -363,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
     <!-- Image Slider (Now on the Right) -->
-    <div class="image-container right-images">
+    <div class="image-container1 right-images">
         <button class="arrow arrow-left" onclick="prevImage2()">&#10094;</button>
         <img src="assets/img/pro11.jpg" class="active" alt="Project 1">
         <img src="assets/img/pro12.jpg" alt="Project 2">
@@ -405,7 +406,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <!--Project3-->
 <div class="projects-container">
 <!-- Image Slider -->
-<div class="image-container3">
+<div class="image-container2">
     <button class="arrow arrow-left" onclick="prevImage()">&#10094;</button>
     <img src="assets/img/ecom.jpg" class="active" alt="Project 1">
     <img src="assets/img/pro22.png"  alt="Project 2">
@@ -664,7 +665,8 @@ function changeImage(step) {
                 </p>
             
               </div>
-            </div><!-- End testimonial item -->
+            </div>
+            <!-- End testimonial item -->
             <div class="swiper-slide">
               <div class="testimonial-item">
               <div class="profile mt-auto">
@@ -751,36 +753,77 @@ function changeImage(step) {
             </div>
 
           </div>
-
           <div class="col-lg-6">
-            <form id="contact-form" action="https://formspree.io/f/xpwqkpvz" method="POST" class="php-email-form">
-            <div class="row">
-              <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          <form id="contact-form" action="https://formspree.io/f/xpwqkpvz" method="POST" class="php-email-form">
+              <div class="row">
+                  <div class="col-md-6 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
               </div>
-              <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
-            </div>
-            <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-            </div>
-            <div class="form-group mt-3">
-              <textarea class="form-control" name="message" placeholder="Message" required></textarea>
-            </div>
-            <div class="my-3">
-              <div class="loading" style="display: none;">Loading...</div>
-              <div class="error-message" style="color: red; display: none;"></div>
-              <div class="sent-message" style="color: green; display: none;">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                  <div class="loading" style="display: none;">Loading...</div>
+                  <div class="error-message" style="color: red; display: none;"></div>
+                  <div class="sent-message" style="color: green; display: none;">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center">
+                  <button type="submit">Send Message</button>
+              </div>
           </form>
-
-          </div><!-- End Contact Form -->
-
-        </div>
-
       </div>
+      
+      <script>
+      // Initialize EmailJS
+      (function() {
+        emailjs.init("XwQR_6EVxfCA2wYZV"); // Your EmailJS Public Key
+      })();
+    
+      // Form submission handler
+      document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+    
+        // Get form values using correct IDs
+        const name = document.getElementById("inputName").value;
+        const email = document.getElementById("inputEmail3").value;
+        const subject = document.getElementById("inputSubject").value;
+        const message = document.getElementById("floatingTextarea2").value;
+    
+        // Validate Email (Only Gmail Addresses)
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        if (!emailRegex.test(email)) {
+          alert("Please enter a valid Gmail address.");
+          return;
+        }
+    
+        // Prepare EmailJS params
+        const params = {
+          user_name: name,
+          user_email: email,
+          subject: subject,  // Added subject field
+          message: message
+        };
+    
+        // Send the message using EmailJS
+        emailjs.send("service_h9fgv1g", "template_kof7ywu", params)
+          .then(function(response) {
+            console.log("SUCCESS!", response.status, response.text);
+            alert("Your message has been sent successfully!");
+            document.getElementById("contact-form").reset(); // Reset form
+          }, function(error) {
+            console.log("FAILED...", error);
+            alert("There was an error sending your message. Please try again.");
+          });
+      });
+    </script>
+    
 
     </section><!-- /Contact Section -->
 
@@ -807,7 +850,7 @@ function changeImage(step) {
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

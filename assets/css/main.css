@@ -1432,6 +1432,46 @@ section,
 .image-container img.active {
   display: block;
 }
+.image-container1 {
+  position: relative;
+  width: 900px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.image-container1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.image-container1 img.active {
+  display: block;
+}
+.image-container2 {
+  position: relative;
+  width: 900px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.image-container2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.image-container2 img.active {
+  display: block;
+}
 
 .arrow {
   position: absolute;
