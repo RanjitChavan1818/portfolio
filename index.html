@@ -7,6 +7,7 @@
   <title>Index - FlexStart Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,6 +27,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  
 </head>
 
 
@@ -41,11 +44,45 @@
   ======================================================== -->
 </head>
 
-<body class="">
+<body class="body">
+
 
   <header id="header" class="header d-flex align-items-center fixed-top">
+  
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
+    
+    <!-- From Uiverse.io by gustavofusco --> 
+    <svg xmlns="http://www.w3.org/2000/svg" height="20px" width="20px" viewBox="0 0 200 200"style=" " class="pencil">
+      <defs>
+        <clipPath id="pencil-eraser">
+          <rect height="30" width="30" ry="5" rx="5"></rect>
+        </clipPath>
+      </defs>
+      <circle transform="rotate(-113,100,100)" stroke-linecap="round" stroke-dashoffset="439.82" stroke-dasharray="439.82 439.82" stroke-width="2" stroke="currentColor" fill="none" r="70" class="pencil__stroke"></circle>
+      <g transform="translate(100,100)" class="pencil__rotate">
+        <g fill="none">
+          <circle transform="rotate(-90)" stroke-dashoffset="402" stroke-dasharray="402.12 402.12" stroke-width="30" stroke="hsl(223,90%,50%)" r="64" class="pencil__body1"></circle>
+          <circle transform="rotate(-90)" stroke-dashoffset="465" stroke-dasharray="464.96 464.96" stroke-width="10" stroke="hsl(223,90%,60%)" r="74" class="pencil__body2"></circle>
+          <circle transform="rotate(-90)" stroke-dashoffset="339" stroke-dasharray="339.29 339.29" stroke-width="10" stroke="hsl(223,90%,40%)" r="54" class="pencil__body3"></circle>
+        </g>
+        <g transform="rotate(-90) translate(49,0)" class="pencil__eraser">
+          <g class="pencil__eraser-skew">
+            <rect height="30" width="30" ry="5" rx="5" fill="hsl(223,90%,70%)"></rect>
+            <rect clip-path="url(#pencil-eraser)" height="30" width="5" fill="hsl(223,90%,60%)"></rect>
+            <rect height="20" width="30" fill="hsl(223,10%,90%)"></rect>
+            <rect height="20" width="15" fill="hsl(223,10%,70%)"></rect>
+            <rect height="20" width="5" fill="hsl(223,10%,80%)"></rect>
+            <rect height="2" width="30" y="6" fill="hsla(223,10%,10%,0.2)"></rect>
+            <rect height="2" width="30" y="13" fill="hsla(223,10%,10%,0.2)"></rect>
+          </g>
+        </g>
+        <g transform="rotate(-90) translate(49,-30)" class="pencil__point">
+          <polygon points="15 0,30 30,0 30" fill="hsl(33,90%,70%)"></polygon>
+          <polygon points="15 0,6 30,0 30" fill="hsl(33,90%,50%)"></polygon>
+          <polygon points="15 0,20 10,10 10" fill="hsl(223,10%,10%)"></polygon>
+        </g>
+      </g>
+    </svg>
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logo.png" alt="">
@@ -72,12 +109,13 @@
 
     </div>
   </header>
+  
 
   <main class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section" style=" height: 100%;">
-
+ 
       <div class="container" >
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
@@ -86,11 +124,11 @@
 
             <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
               <a href="#about" class="btn-get-started">Get Started <i class="bi bi-arrow-right"></i></a>
-              <a href="#video" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+              <a href="assets/img/Tech.mp4" class="glightbox btn-watch-video d-flex align-items-center justify-content-center ms-0 ms-md-4 mt-4 mt-md-0"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
             </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-6 hero-img w-full h-full" s data-aos="zoom-out">
-            <img src="assets/img/hero3.png" class="img-fluid animated" alt="" >
+            <img src="assets/img/bg2.png" class="img-fluid animated" alt="" >
           </div>
         </div>
       </div>
@@ -99,7 +137,11 @@
 
     <!-- About Section -->
     <section id="about" class="about section">
-    <h1 class=""style="margin-left:660px ">About Me</h1>
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p class="gallery-heading">About Me</p>
+    </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up">
         <div class="row gx-0">
@@ -134,26 +176,30 @@
     </section>
 <section id="education" >
   
-    <h3 class="education-heading">Education</h3>
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Education</h2>
+  <p class="gallery-heading">Education</p>
+</div><!-- End Section Title -->
     <div class="timeline">
         <div class="line"></div>
     
         <div class="milestone">
             <div class="icon-circle"><i class="fas fa-school"></i></div>
             <span>SSC</span>
-            <div class="card">Secondary School Certificate (SSC) completed with 84.20%.</div>
+            <div class="card">I completed my Secondary School Certificate (SSC) from L.S.V.D Vidyalaya, Javale, securing 84.20%. This achievement laid a strong foundation for my academic journey.</div>
         </div>
     
         <div class="milestone">
             <div class="icon-circle"><i class="fas fa-university"></i></div>
             <span>HSC</span>
-            <div class="card">Higher Secondary Certificate (HSC) completed with 84%.</div>
+            <div class="card">I completed my Higher Secondary Certificate (HSC) from same college  with 84%.</div>
         </div>
     
         <div class="milestone">
             <div class="icon-circle"><i class="fas fa-trophy"></i></div>
             <span>MHT CET</span>
-            <div class="card">Scored 98.20 percentile in MHT CET entrance exam.</div>
+            <div class="card">I dedicatedly prepared for the MHT CET exam and achieving a remarkable 98.20 percentile. This accomplishment reflects my strong analytical and problem-solving skills.</div>
         </div>
     
         <div class="milestone">
@@ -166,8 +212,12 @@
 </section>
 
     <section id="skills">
-    <!-- Skills -->
-    <h2 class="skills-heading">Skills</h2>
+    <!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Skills</h2>
+  <p class="gallery-heading">Skills</p>
+</div><!-- End Section Title -->
+  
     <div class="skills-container">
         <div class="skill-card">
             <img src="assets/img/p1.png" alt="Python">
@@ -246,7 +296,11 @@
 
 <!-- Project -->
 <section id="project">
-<h2 class="projects-heading">Projects</h2>
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Projects</h2>
+  <p class="gallery-heading">Projects</p>
+</div><!-- End Section Title -->
 <div class="projects-container">
 <!-- Image Slider -->
 <div class="image-container">
@@ -399,7 +453,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!--Gallery-->
 <section id="gallery">
-<h2 class="gallery-heading">Gallery</h2>
+<!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>Gallery</h2>
+  <p class="gallery-heading">Gallery</p>
+</div><!-- End Section Title -->
+
 <div class="gallery">
 <div class="card1" onclick="openLightbox(0)">
     <img src="assets/img/A3.jpg" alt="Image 1">
@@ -416,32 +475,32 @@ document.addEventListener("DOMContentLoaded", function () {
   <!--  <h3>Achieving New Heights of Success </h3>
     <p>Honored for securing 1st place in college and 2nd in university with an outstanding 95.50 percentile</p> -->
 </div>
-<div class="card1" onclick="openLightbox(0)">
+<div class="card1" onclick="openLightbox(3)">
     <img src="assets/img/H4.jpg" alt="Image 1">
   <!--  <h3>Traditional Day</h3>
     <p>---------------------.</p> -->
 </div>
-<div class="card1" onclick="openLightbox(1)">
+<div class="card1" onclick="openLightbox(4)">
     <img src="assets/img/A4.jpg" alt="Image 2">
  <!--   <h3>Favorite Teacher</h3>
     <p>-----------------------</p>-->
 </div>
-<div class="card1" onclick="openLightbox(2)">
+<div class="card1" onclick="openLightbox(5)">
     <img src="assets/img/A8.jpg" alt="Image 3">
   <!--  <h3>Photo With Aba </h3>
     <p>--------------------</p>c-->
 </div>
-<div class="card1" onclick="openLightbox(0)">
+<div class="card1" onclick="openLightbox(6)">
     <img src="assets/img/H3.jpg" alt="Image 1">
    <!-- <h3>Traditional Day</h3>
     <p>---------------------.</p> -->
 </div>
-<div class="card1" onclick="openLightbox(1)">
+<div class="card1" onclick="openLightbox(7)">
     <img src="assets/img/H2.jpg" alt="Image 2">
    <!-- <h3>Favorite Teacher</h3>
     <p>-----------------------</p> -->
 </div>
-<div class="card1" onclick="openLightbox(2)">
+<div class="card1" onclick="openLightbox(8)">
     <img src="assets/img/H5.jpg" alt="Image 3">
   <!--  <h3>Photo With Aba </h3>
     <p>--------------------</p>-->
@@ -504,7 +563,7 @@ function changeImage(step) {
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Testimonials</h2>
-        <p>What they are saying about us<br></p>
+        <p>What they are saying about me<br></p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -537,83 +596,85 @@ function changeImage(step) {
           </script>
           <div class="swiper-wrapper">
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                Ranjit is one of the most talented and hardworking individuals I’ve met. His dedication to coding and web development is truly inspiring. He is always ready to help others and finds creative solutions to complex problems. Working with him has been a great learning experience
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/yash.jpg" class="testimonial-img" alt="">
-                  <h3>Yash Reddy</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
+          <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="profile">
+                      <img src="assets/img/yash.jpg" class="testimonial-img" alt="Yash Reddy">
+                      <h3>Yash Reddy</h3>
+                      <h4>Team Member</h4>
+                    </div>
+                    <p>
+                      "Ranjit is one of the most talented and hardworking individuals I’ve met. His dedication to coding and web development is truly inspiring. He is always ready to help others and finds creative solutions to complex problems. Working with him has been a great learning experience."
+                    </p>
+                  </div>
+            </div>
+
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
+              <div class="profile ">
+              <img src="assets/img/vaibhav.jpg" class="testimonial-img" alt="">
+              <h3>Vaibhav Survase</h3>
+              <h4>Team Member</h4>
+            </div>
                 <p>
                  Ranjit is not just a brilliant coder but also a great leader. His ability to think outside the box and guide the team towards success is amazing. Whether its programming, 3D animation, or web design, he gives his best in everything he does
                 </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/vaibhav.jpg" class="testimonial-img" alt="">
-                  <h3>Vaibhav Survase</h3>
-                  <h4>Designer</h4>
-                </div>
+               
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
+              <div class="profile mt-auto">
+              <img src="assets/img/sumit.jpg" class="testimonial-img" alt="">
+              <h3>Sumit Sangave</h3>
+              <h4>Team Member</h4>
+            </div>
                 <p>
                 A person who never gives up! Ranjit is someone who always strives for excellence. His problem-solving skills and dedication to learning new technologies make him stand out. I’ve seen him manage multiple projects with ease and deliver outstanding results
                 </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/sumit.jpg" class="testimonial-img" alt="">
-                  <h3>Sumit Sangave</h3>
-                  <h4>Store Owner</h4>
-                </div>
+             
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
+              <div class="profile mt-auto">
+              <img src="assets/img/abhi.jpg" class="testimonial-img" alt="">
+              <h3>Abhishek Savalgi</h3>
+              <h4>Team Member</h4>
+            </div>
                 <p>
                 Ranjit is a true tech enthusiast! His knowledge of programming, web development, and animations is remarkable. He is always eager to share his knowledge and help others grow. A great team player and an even better friend
                 </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/abhi.jpg" class="testimonial-img" alt="">
-                  <h3>Abhishek Savalgi</h3>
-                  <h4>Freelancer</h4>
-                </div>
+              
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
               <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
+              <div class="profile mt-auto">
+              <img src="assets/img/Disha.jpg" class="testimonial-img" alt="">
+              <h3>Disha Didi</h3>
+              <h4>Mentor</h4>
+            </div>
                 <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                A calm and composed professional with a deep understanding of technical concepts. He is quick to adapt, grasps requirements effectively, and develops solutions that meet expectations. His ability to learn new technologies and apply them efficiently makes him a valuable asset
                 </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
+            
+              </div>
+            </div><!-- End testimonial item -->
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+              <div class="profile mt-auto">
+              <img src="assets/img/priti.jpg" class="testimonial-img" alt="">
+              <h3>Priti Chougule</h3>
+              <h4>Team Member</h4>
+            </div>
+                <p>
+                A hardworking and dedicated individual, always striving for excellence in academics. He is a quick learner with great enthusiasm and commitment, making him a valuable team player.He not only excels in his own work but also inspires those around him with his dedication and perseverance.  </p>
+            
               </div>
             </div><!-- End testimonial item -->
 
@@ -735,10 +796,10 @@ function changeImage(step) {
       Made with ❤️ by Ranjit Chavan
   </p>
   <div class="social-links d-flex" style="gap: 15px;">
-      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='yellow'" onmouseout="this.style.color='white'"><i class="bi bi-twitter-x"></i></a>
-      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='yellow'" onmouseout="this.style.color='white'"><i class="bi bi-facebook"></i></a>
-      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='yellow'" onmouseout="this.style.color='white'"><i class="bi bi-instagram"></i></a>
-      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='yellow'" onmouseout="this.style.color='white'"><i class="bi bi-linkedin"></i></a>
+      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-twitter-x"></i></a>
+      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-facebook"></i></a>
+      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-instagram"></i></a>
+      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-linkedin"></i></a>
   </div>
 </footer>
 
@@ -761,6 +822,7 @@ function changeImage(step) {
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
