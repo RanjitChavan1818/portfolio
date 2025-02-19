@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - FlexStart Bootstrap Template</title>
+  <title> TechCrack</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/t1.png" rel="icon"style="width:200px">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -753,35 +753,29 @@ function changeImage(step) {
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
+            <form id="contact-form" action="https://formspree.io/f/xpwqkpvz" method="POST" class="php-email-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
               </div>
-            </form>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading" style="display: none;">Loading...</div>
+              <div class="error-message" style="color: red; display: none;"></div>
+              <div class="sent-message" style="color: green; display: none;">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+
           </div><!-- End Contact Form -->
 
         </div>
@@ -797,11 +791,12 @@ function changeImage(step) {
   </p>
   <div class="social-links d-flex" style="gap: 15px;">
       <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-twitter-x"></i></a>
-      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-facebook"></i></a>
-      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-instagram"></i></a>
-      <a href="" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-linkedin"></i></a>
+      <a href="https://www.facebook.com/share/1BNk9dj7ni/" target="_blank" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/ranjitchavan1050/?utm_source=ig_web_button_share_sheet" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/ranjit-chavan-9746872a4/" target="_blank" style="color: white; font-size: 20px; transition: color 0.3s;" onmouseover="this.style.color='blue'" onmouseout="this.style.color='white'"><i class="bi bi-linkedin"></i></a>
   </div>
 </footer>
+
 
 
 
